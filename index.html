@@ -9,14 +9,14 @@
         
         body {
             font-family: 'Kaushan Script', cursive;
-            background: url('https://wallpapercave.com/wp/wp5895824.jpg') no-repeat center center/cover;
+            background: url('https://wallpapercave.com/wp/wp6602594.jpg') no-repeat center center/cover;
             color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
             overflow: hidden;
             position: relative;
         }
@@ -36,66 +36,92 @@
             border-radius: 15px;
             box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
-            max-width: 500px;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
         }
         h1 {
-            font-size: 32px;
+            font-size: 42px;
             margin-bottom: 20px;
             color: #ffcc00;
             text-shadow: 3px 3px 10px rgba(255, 204, 0, 0.8);
+            width: 100%;
         }
         .social-links {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
             list-style: none;
             padding: 0;
             width: 100%;
         }
+        .social-links li {
+            position: relative;
+        }
         .social-links a {
             text-decoration: none;
             color: white;
-            padding: 10px;
+            padding: 15px 40px;
             border-radius: 10px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             display: block;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid white;
+            border: 3px solid white;
             text-align: center;
             background: rgba(0, 0, 0, 0.8);
-            width: 100%;
+            position: relative;
         }
+        .social-links a::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+        .social-links a.facebook::before { background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Facebook_Logo_2023.png'); }
+        .social-links a.twitter::before { background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg'); }
+        .social-links a.instagram::before { background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'); }
+        .social-links a.linkedin::before { background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg'); }
+        .social-links a.tiktok::before { background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg'); }
+        .social-links a.telegram::before { background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg'); }
+        .social-links a.gmail::before { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png'); }
+        
         .social-links a:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
             border-color: yellow;
         }
+
         .snowflake {
             position: absolute;
             top: -10px;
             background: white;
             border-radius: 50%;
-            opacity: 0.9;
+            opacity: 0.8;
             animation: snowfall linear infinite;
         }
+
         @keyframes snowfall {
             to {
                 transform: translateY(100vh);
             }
         }
-        @media (min-width: 600px) {
-            .social-links {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
             }
             .social-links a {
-                width: auto;
-                padding: 15px 30px;
+                font-size: 16px;
+                padding: 12px 30px;
             }
         }
     </style>
@@ -105,11 +131,11 @@
     <div class="container">
         <h1>Connect with Me</h1>
         <ul class="social-links">
-            <li><a href="https://www.facebook.com/uronly1jing/" class="facebook" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com/Jing200424" class="twitter" target="_blank">Twitter</a></li>
-            <li><a href="https://www.instagram.com/p/CI5sf8dF2vN/" class="instagram" target="_blank">Instagram</a></li>
+            <li><a href="https://web.facebook.com/uronly1jing/" class="facebook" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com/Jing200424" class="twitter" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/p/CI5sf8dF2vN/?fbclid=IwY2xjawErvWRleHRuA2FlbQIxMAABHS-LliW6f_0N18WCf0hnpJg6DQGuNMCtW5O40c91JogABBiMSyjsHEG82Q_aem_b5xjHRdJ5qnYy_pOfxhaVw" class="instagram" target="_blank">Instagram</a></li>
             <li><a href="https://www.linkedin.com/in/ssn-tube-0394741a2" class="linkedin" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.tiktok.com/@fb_andreww" class="tiktok" target="_blank">TikTok</a></li>
+            <li><a href="https://www.tiktok.com/@fb_andreww?is_from_webapp=1&sender_device=pc" class="tiktok" target="_blank">TikTok</a></li>
             <li><a href="https://t.me/Ucancallmejing" class="telegram" target="_blank">Telegram</a></li>
             <li><a href="mailto:pardpand@gmail.com" class="gmail" target="_blank">Gmail</a></li>
         </ul>
@@ -117,14 +143,13 @@
     <script>
         function createSnowflakes() {
             const snowContainer = document.querySelector('.snow');
-            for (let i = 0; i < 150; i++) { // Increased snowflake count
+            for (let i = 0; i < 100; i++) {  // Increased the number of snowflakes
                 const snowflake = document.createElement('div');
                 snowflake.classList.add('snowflake');
-                snowflake.style.width = Math.random() * 6 + 'px'; // Slightly bigger snowflakes
+                snowflake.style.width = Math.random() * 5 + 'px';
                 snowflake.style.height = snowflake.style.width;
                 snowflake.style.left = Math.random() * 100 + 'vw';
-                snowflake.style.animationDuration = (Math.random() * 4 + 2) + 's'; // Faster snowfall
-                snowflake.style.opacity = Math.random() * 0.9 + 0.1; // Random opacity for realism
+                snowflake.style.animationDuration = (Math.random() * 5 + 3) + 's';
                 snowContainer.appendChild(snowflake);
             }
         }
