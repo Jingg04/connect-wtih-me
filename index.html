@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio | Alex Johnson</title>
+    <title>Creative Portfolio | Video Producer & Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
     <style>
@@ -16,18 +16,18 @@
         }
         
         :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #f59e0b;
-            --dark-color: #1e293b;
-            --light-color: #f8fafc;
-            --text-color: #334155;
-            --text-light: #64748b;
+            --primary-color: #8B5CF6;
+            --secondary-color: #7C3AED;
+            --accent-color: #F59E0B;
+            --dark-color: #1F2937;
+            --light-color: #F9FAFB;
+            --text-color: #374151;
+            --text-light: #6B7280;
             --card-bg: #ffffff;
             --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --border-radius: 12px;
+            --border-radius: 16px;
         }
         
         html {
@@ -98,7 +98,7 @@
         
         .container {
             width: 90%;
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -134,12 +134,12 @@
             transition: var(--transition);
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
         }
         
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
         }
         
         .btn-outline {
@@ -237,7 +237,7 @@
         /* Hero Section */
         #hero {
             padding-top: 12rem;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -251,7 +251,7 @@
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(30, 64, 175, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.05) 100%);
             top: -200px;
             right: -100px;
             z-index: 0;
@@ -306,7 +306,7 @@
             gap: 2rem;
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(30, 41, 59, 0.1);
+            border-top: 1px solid rgba(31, 41, 55, 0.1);
         }
         
         .stat {
@@ -344,14 +344,15 @@
             margin-bottom: 1.5rem;
         }
         
-        .about-skills {
+        .about-services {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
+            margin-top: 2rem;
         }
         
-        .skill-tag {
-            background-color: #f1f5f9;
+        .service-tag {
+            background-color: #F5F3FF;
             padding: 0.8rem 1.2rem;
             border-radius: 50px;
             font-weight: 600;
@@ -361,12 +362,12 @@
             transition: var(--transition);
         }
         
-        .skill-tag:hover {
-            background-color: #e0f2fe;
+        .service-tag:hover {
+            background-color: #EDE9FE;
             transform: translateY(-3px);
         }
         
-        .skill-tag i {
+        .service-tag i {
             color: var(--primary-color);
         }
         
@@ -456,8 +457,8 @@
         
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
         }
         
         .project-card {
@@ -523,11 +524,12 @@
         }
         
         .project-info {
-            padding: 2rem;
+            padding: 1.8rem;
         }
         
         .project-info h3 {
             margin-bottom: 0.8rem;
+            font-size: 1.3rem;
         }
         
         .project-meta {
@@ -545,6 +547,7 @@
             font-size: 0.9rem;
             color: var(--primary-color);
             font-weight: 600;
+            margin-bottom: 0.5rem;
         }
         
         .project-links {
@@ -578,12 +581,49 @@
         }
         
         .tag {
-            background-color: #f0f9ff;
+            background-color: #F5F3FF;
             padding: 0.3rem 0.8rem;
             border-radius: 50px;
             font-size: 0.8rem;
             color: var(--primary-color);
             font-weight: 500;
+        }
+        
+        /* Portfolio Grid for Posters/Designs */
+        .design-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .design-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .design-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .design-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .design-item:hover .design-img {
+            transform: scale(1.05);
+        }
+        
+        .design-info {
+            padding: 1.5rem;
+            background-color: white;
         }
         
         /* Video Modal */
@@ -633,7 +673,7 @@
         
         /* Contact Section */
         #contact {
-            background: linear-gradient(135deg, var(--dark-color) 0%, #0f172a 100%);
+            background: linear-gradient(135deg, var(--dark-color) 0%, #111827 100%);
             color: white;
         }
         
@@ -725,7 +765,7 @@
         
         /* Footer */
         footer {
-            background-color: #0f172a;
+            background-color: #111827;
             color: white;
             padding: 4rem 0 2rem;
         }
@@ -796,6 +836,16 @@
         }
         
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .projects-container {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .design-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
         @media (max-width: 1024px) {
             h1 {
                 font-size: 3rem;
@@ -821,6 +871,10 @@
             
             .hero-stats {
                 justify-content: center;
+            }
+            
+            .about-services {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -868,11 +922,11 @@
                 grid-template-columns: 1fr;
             }
             
-            .skills-container {
-                grid-template-columns: 1fr;
+            .design-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
             
-            .about-skills {
+            .skills-container {
                 grid-template-columns: 1fr;
             }
             
@@ -907,6 +961,10 @@
                 flex-direction: column;
                 gap: 1.5rem;
             }
+            
+            .design-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -916,8 +974,8 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <i class="ri-code-s-slash-line"></i>
-                    <span>Portfolio</span>
+                    <i class="ri-camera-3-line"></i>
+                    <span>Creative Portfolio</span>
                 </div>
                 <div class="menu-toggle" id="menuToggle">
                     <i class="ri-menu-line"></i>
@@ -926,7 +984,9 @@
                     <li><a href="#hero" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#video-projects">Video Projects</a></li>
+                    <li><a href="#design-projects">Design Projects</a></li>
+                    <li><a href="#ui-projects">UI/UX Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -938,31 +998,31 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <span class="section-subtitle">Hello, I'm</span>
-                    <h1>Alex Johnson</h1>
-                    <h2>Full Stack Developer & UI/UX Designer</h2>
-                    <p>I build exceptional digital experiences that are fast, accessible, visually appealing, and responsive. With 5+ years of experience, I've worked with startups and Fortune 500 companies to create impactful web solutions.</p>
+                    <span class="section-subtitle">Creative Professional</span>
+                    <h1>Alex Morgan</h1>
+                    <h2>Video Producer & Visual Designer</h2>
+                    <p>I create compelling visual stories through video production, graphic design, and user experience design. With 8+ years of experience, I've worked with brands, startups, and creative agencies to deliver impactful visual content.</p>
                     <div class="hero-btns">
-                        <a href="#projects" class="btn"><i class="ri-eye-line"></i> View Projects</a>
-                        <a href="#contact" class="btn btn-outline"><i class="ri-mail-line"></i> Contact Me</a>
+                        <a href="#video-projects" class="btn"><i class="ri-video-line"></i> View Video Work</a>
+                        <a href="#contact" class="btn btn-outline"><i class="ri-mail-line"></i> Hire Me</a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Projects Done</span>
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Video Projects</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">35+</span>
-                            <span class="stat-label">Happy Clients</span>
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Design Projects</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">5+</span>
+                            <span class="stat-number">8+</span>
                             <span class="stat-label">Years Experience</span>
                         </div>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Alex Johnson">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Video Producer">
                 </div>
             </div>
         </div>
@@ -973,22 +1033,24 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">About Me</span>
-                <h2>Professional Background</h2>
+                <h2>Creative Visionary</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate full-stack developer specializing in modern web technologies. My journey began with Computer Science degree from Stanford University, followed by 5 years of hands-on experience in the tech industry.</p>
-                    <p>Currently, I work as a Senior Developer at TechSolutions Inc., where I lead a team of 5 developers building enterprise-level applications. I've contributed to projects handling millions of users and complex data processing.</p>
-                    <p>When I'm not coding, I enjoy contributing to open-source projects, writing technical blogs, and mentoring aspiring developers. I believe in continuous learning and staying updated with the latest industry trends.</p>
-                    <div class="about-skills">
-                        <span class="skill-tag"><i class="ri-reactjs-line"></i> React.js</span>
-                        <span class="skill-tag"><i class="ri-nodejs-line"></i> Node.js</span>
-                        <span class="skill-tag"><i class="ri-database-2-line"></i> MongoDB</span>
-                        <span class="skill-tag"><i class="ri-cloud-line"></i> AWS</span>
+                    <p>I'm a multidisciplinary creative specializing in video production, graphic design, and UI/UX design. My journey began with a film degree from NYU, followed by 8 years of working with diverse clients across industries.</p>
+                    <p>Currently, I work as a Creative Director at Visual Stories Agency, where I lead a team of 10 creatives producing video content, branding materials, and digital experiences for global clients.</p>
+                    <p>I believe in the power of visual storytelling to connect brands with their audiences. My approach combines technical expertise with artistic vision to create memorable experiences.</p>
+                    <div class="about-services">
+                        <span class="service-tag"><i class="ri-video-line"></i> Video Production</span>
+                        <span class="service-tag"><i class="ri-scissors-line"></i> Video Editing</span>
+                        <span class="service-tag"><i class="ri-brush-line"></i> Graphic Design</span>
+                        <span class="service-tag"><i class="ri-layout-line"></i> UI/UX Design</span>
+                        <span class="service-tag"><i class="ri-smartphone-line"></i> Mobile App Design</span>
+                        <span class="service-tag"><i class="ri-window-line"></i> Web Design</span>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Team Collaboration" style="width:100%; border-radius:var(--border-radius);">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Creative Studio" style="width:100%; border-radius:var(--border-radius);">
                 </div>
             </div>
         </div>
@@ -1003,11 +1065,20 @@
             </div>
             <div class="skills-container">
                 <div class="skill-category">
-                    <i class="ri-palette-line"></i>
-                    <h3>Frontend Development</h3>
+                    <i class="ri-video-line"></i>
+                    <h3>Video Production</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>React.js</span>
+                            <span>Premiere Pro</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-width="98"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>After Effects</span>
                             <span>95%</span>
                         </div>
                         <div class="skill-bar">
@@ -1016,7 +1087,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>TypeScript</span>
+                            <span>DaVinci Resolve</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
@@ -1025,21 +1096,80 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Vue.js</span>
-                            <span>85%</span>
+                            <span>Cinematography</span>
+                            <span>92%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-level" data-width="85"></div>
+                            <div class="skill-level" data-width="92"></div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <i class="ri-server-line"></i>
-                    <h3>Backend Development</h3>
+                    <i class="ri-pencil-ruler-line"></i>
+                    <h3>Design & Graphics</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Node.js</span>
+                            <span>Photoshop</span>
+                            <span>96%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-width="96"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Illustrator</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-width="94"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>InDesign</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Motion Graphics</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <i class="ri-layout-line"></i>
+                    <h3>UI/UX Design</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Figma</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Adobe XD</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Prototyping</span>
                             <span>92%</span>
                         </div>
                         <div class="skill-bar">
@@ -1048,52 +1178,11 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Python/Django</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>PostgreSQL</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="90"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <i class="ri-tools-line"></i>
-                    <h3>Tools & DevOps</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Docker & Kubernetes</span>
+                            <span>User Research</span>
                             <span>85%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-level" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>AWS Cloud</span>
-                            <span>82%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="82"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>CI/CD Pipelines</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="88"></div>
                         </div>
                     </div>
                 </div>
@@ -1101,43 +1190,43 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <!-- Video Projects Section -->
+    <section id="video-projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">My Work</span>
-                <h2>Featured Projects</h2>
+                <span class="section-subtitle">Video Portfolio</span>
+                <h2>Video Production & Editing</h2>
             </div>
             
             <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-                <button class="filter-btn" data-filter="video">Video Demos</button>
+                <button class="filter-btn active" data-filter="all">All Videos</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="corporate">Corporate</button>
+                <button class="filter-btn" data-filter="documentary">Documentary</button>
+                <button class="filter-btn" data-filter="music">Music Video</button>
             </div>
             
             <div class="projects-container">
-                <!-- Project 1 - Video Demo -->
-                <div class="project-card" data-category="video web">
+                <!-- Video Project 1 -->
+                <div class="project-card" data-category="commercial">
                     <div class="project-media">
                         <div class="video-play-btn" data-video="project1">
                             <i class="ri-play-circle-line"></i>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="E-commerce Platform" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80" alt="Tech Commercial" class="project-img">
                     </div>
                     <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Video Demo</span>
-                        <h3>Modern E-commerce Platform</h3>
-                        <p>A full-featured online shopping platform with advanced filtering, real-time inventory management, and integrated payment processing.</p>
+                        <span class="project-type"><i class="ri-video-line"></i> Commercial Video</span>
+                        <h3>Tech Startup Product Launch</h3>
+                        <p>60-second commercial for a tech startup's new product, featuring cinematic shots and dynamic motion graphics.</p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Stripe</span>
+                            <span class="tag">Cinematic</span>
+                            <span class="tag">Motion Graphics</span>
+                            <span class="tag">Color Grading</span>
                         </div>
                         <div class="project-meta">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-github-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
                                 <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
                             </div>
                             <div class="project-date">Jan 2023</div>
@@ -1145,24 +1234,53 @@
                     </div>
                 </div>
                 
-                <!-- Project 2 - Web App -->
-                <div class="project-card" data-category="web">
+                <!-- Video Project 2 -->
+                <div class="project-card" data-category="corporate">
                     <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Task Management App" class="project-img">
+                        <div class="video-play-btn" data-video="project2">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Corporate Video" class="project-img">
                     </div>
                     <div class="project-info">
-                        <span class="project-type"><i class="ri-window-line"></i> Web Application</span>
-                        <h3>Productivity Task Manager</h3>
-                        <p>A collaborative task management application with team assignments, progress tracking, and real-time notifications.</p>
+                        <span class="project-type"><i class="ri-video-line"></i> Corporate Video</span>
+                        <h3>Annual Company Report</h3>
+                        <p>10-minute corporate video summarizing annual achievements with interviews, b-roll, and animated infographics.</p>
                         <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Express</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">WebSockets</span>
+                            <span class="tag">Interview</span>
+                            <span class="tag">Infographics</span>
+                            <span class="tag">Corporate</span>
                         </div>
                         <div class="project-meta">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-github-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Feb 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Project 3 -->
+                <div class="project-card" data-category="documentary">
+                    <div class="project-media">
+                        <div class="video-play-btn" data-video="project3">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Documentary" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-video-line"></i> Documentary</span>
+                        <h3>Urban Sustainability Stories</h3>
+                        <p>25-minute documentary exploring urban sustainability initiatives across five major cities.</p>
+                        <div class="project-tags">
+                            <span class="tag">Documentary</span>
+                            <span class="tag">Cinema Verite</span>
+                            <span class="tag">Sound Design</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
                                 <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
                             </div>
                             <div class="project-date">Mar 2023</div>
@@ -1170,27 +1288,53 @@
                     </div>
                 </div>
                 
-                <!-- Project 3 - Video Demo -->
-                <div class="project-card" data-category="video mobile">
+                <!-- Video Project 4 -->
+                <div class="project-card" data-category="music">
                     <div class="project-media">
-                        <div class="video-play-btn" data-video="project2">
+                        <div class="video-play-btn" data-video="project4">
                             <i class="ri-play-circle-line"></i>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Fitness App" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Music Video" class="project-img">
                     </div>
                     <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Video Demo</span>
-                        <h3>AI Fitness Assistant Mobile App</h3>
-                        <p>A mobile application that uses AI to create personalized workout plans and track progress with motion detection technology.</p>
+                        <span class="project-type"><i class="ri-video-line"></i> Music Video</span>
+                        <h3>"Neon Dreams" - Indie Band</h3>
+                        <p>Music video for an indie band featuring creative lighting, practical effects, and narrative storytelling.</p>
                         <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">TensorFlow.js</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">AI/ML</span>
+                            <span class="tag">Music Video</span>
+                            <span class="tag">Creative Lighting</span>
+                            <span class="tag">Narrative</span>
                         </div>
                         <div class="project-meta">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-github-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Apr 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Project 5 -->
+                <div class="project-card" data-category="commercial">
+                    <div class="project-media">
+                        <div class="video-play-btn" data-video="project5">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80" alt="Fashion Commercial" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-video-line"></i> Fashion Commercial</span>
+                        <h3>Spring Collection Launch</h3>
+                        <p>30-second fashion commercial shot on location in Milan for a luxury brand's spring collection.</p>
+                        <div class="project-tags">
+                            <span class="tag">Fashion</span>
+                            <span class="tag">Location Shoot</span>
+                            <span class="tag">Color Grading</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
                                 <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
                             </div>
                             <div class="project-date">May 2023</div>
@@ -1198,24 +1342,80 @@
                     </div>
                 </div>
                 
-                <!-- Project 4 - Web App -->
-                <div class="project-card" data-category="web">
+                <!-- Video Project 6 -->
+                <div class="project-card" data-category="corporate">
                     <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Weather Dashboard" class="project-img">
+                        <div class="video-play-btn" data-video="project6">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brand Story" class="project-img">
                     </div>
                     <div class="project-info">
-                        <span class="project-type"><i class="ri-window-line"></i> Web Application</span>
-                        <h3>Advanced Weather Analytics Dashboard</h3>
-                        <p>A comprehensive weather data visualization platform with historical trends, predictive analytics, and custom alerts.</p>
+                        <span class="project-type"><i class="ri-video-line"></i> Brand Story</span>
+                        <h3>Founder's Journey Documentary</h3>
+                        <p>15-minute brand story video following the founder's journey from startup to successful enterprise.</p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">Weather API</span>
-                            <span class="tag">Chart.js</span>
+                            <span class="tag">Brand Story</span>
+                            <span class="tag">Entrepreneurship</span>
+                            <span class="tag">Interview</span>
                         </div>
                         <div class="project-meta">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-github-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Jun 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Project 7 -->
+                <div class="project-card" data-category="documentary">
+                    <div class="project-media">
+                        <div class="video-play-btn" data-video="project7">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Nature Documentary" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-video-line"></i> Nature Documentary</span>
+                        <h3>Coastal Ecosystems</h3>
+                        <p>40-minute documentary exploring coastal ecosystems and conservation efforts.</p>
+                        <div class="project-tags">
+                            <span class="tag">Nature</span>
+                            <span class="tag">Conservation</span>
+                            <span class="tag">Drone Footage</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Jul 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Project 8 -->
+                <div class="project-card" data-category="music">
+                    <div class="project-media">
+                        <div class="video-play-btn" data-video="project8">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Concert Film" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-video-line"></i> Concert Film</span>
+                        <h3>Live Festival Performance</h3>
+                        <p>Multi-camera concert film of a major music festival performance with 8K resolution.</p>
+                        <div class="project-tags">
+                            <span class="tag">Concert</span>
+                            <span class="tag">Live Performance</span>
+                            <span class="tag">Multi-camera</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
                                 <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
                             </div>
                             <div class="project-date">Aug 2023</div>
@@ -1223,27 +1423,53 @@
                     </div>
                 </div>
                 
-                <!-- Project 5 - Video Demo -->
-                <div class="project-card" data-category="video web">
+                <!-- Video Project 9 -->
+                <div class="project-card" data-category="commercial">
                     <div class="project-media">
-                        <div class="video-play-btn" data-video="project3">
+                        <div class="video-play-btn" data-video="project9">
                             <i class="ri-play-circle-line"></i>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1715&q=80" alt="Finance Dashboard" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Automotive Commercial" class="project-img">
                     </div>
                     <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Video Demo</span>
-                        <h3>Real-time Financial Analytics Platform</h3>
-                        <p>A enterprise-level dashboard for financial institutions to monitor transactions, detect anomalies, and generate reports in real-time.</p>
+                        <span class="project-type"><i class="ri-video-line"></i> Automotive Commercial</span>
+                        <h3>Electric Vehicle Campaign</h3>
+                        <p>Cinematic commercial for a new electric vehicle featuring dynamic driving shots and slow-motion sequences.</p>
                         <div class="project-tags">
-                            <span class="tag">Angular</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">WebSockets</span>
-                            <span class="tag">Docker</span>
+                            <span class="tag">Automotive</span>
+                            <span class="tag">Cinematic</span>
+                            <span class="tag">Slow Motion</span>
                         </div>
                         <div class="project-meta">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-github-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Sep 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Project 10 -->
+                <div class="project-card" data-category="corporate">
+                    <div class="project-media">
+                        <div class="video-play-btn" data-video="project10">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Training Video" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-video-line"></i> Training Video</span>
+                        <h3>Employee Onboarding Series</h3>
+                        <p>Series of 12 training videos for new employee onboarding with animations and screen recordings.</p>
+                        <div class="project-tags">
+                            <span class="tag">Training</span>
+                            <span class="tag">Educational</span>
+                            <span class="tag">Animation</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
                                 <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
                             </div>
                             <div class="project-date">Oct 2023</div>
@@ -1251,27 +1477,407 @@
                     </div>
                 </div>
                 
-                <!-- Project 6 - Mobile App -->
-                <div class="project-card" data-category="mobile">
+                <!-- Video Project 11 -->
+                <div class="project-card" data-category="documentary">
                     <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Travel App" class="project-img">
+                        <div class="video-play-btn" data-video="project11">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Cultural Documentary" class="project-img">
                     </div>
                     <div class="project-info">
-                        <span class="project-type"><i class="ri-smartphone-line"></i> Mobile Application</span>
-                        <h3>Travel Planning Companion App</h3>
-                        <p>A mobile application that helps users plan trips, book accommodations, and discover local attractions with AR integration.</p>
+                        <span class="project-type"><i class="ri-video-line"></i> Cultural Documentary</span>
+                        <h3>Traditional Craftsmanship</h3>
+                        <p>30-minute documentary exploring traditional craftsmanship techniques in Southeast Asia.</p>
                         <div class="project-tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Google Maps API</span>
-                            <span class="tag">ARCore</span>
+                            <span class="tag">Cultural</span>
+                            <span class="tag">Traditional</span>
+                            <span class="tag">Artisan</span>
                         </div>
                         <div class="project-meta">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-github-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Nov 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Project 12 -->
+                <div class="project-card" data-category="music">
+                    <div class="project-media">
+                        <div class="video-play-btn" data-video="project12">
+                            <i class="ri-play-circle-line"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Music Documentary" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-video-line"></i> Music Documentary</span>
+                        <h3>Recording Studio Sessions</h3>
+                        <p>Behind-the-scenes documentary of an album recording process in a famous studio.</p>
+                        <div class="project-tags">
+                            <span class="tag">Behind-the-Scenes</span>
+                            <span class="tag">Recording</span>
+                            <span class="tag">Studio</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
                                 <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
                             </div>
                             <div class="project-date">Dec 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Projects Section -->
+    <section id="design-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Design Portfolio</span>
+                <h2>Graphic Design & Posters</h2>
+            </div>
+            
+            <div class="design-grid">
+                <!-- Design 1 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" alt="Music Festival Poster" class="design-img">
+                    <div class="design-info">
+                        <h3>Music Festival Poster</h3>
+                        <p>Vibrant poster design for a summer music festival with custom typography.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 2 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brand Identity" class="design-img">
+                    <div class="design-info">
+                        <h3>Brand Identity System</h3>
+                        <p>Complete brand identity including logo, color palette, and typography.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 3 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Book Cover" class="design-img">
+                    <div class="design-info">
+                        <h3>Book Cover Design</h3>
+                        <p>Cover design for a bestselling novel with custom illustration.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 4 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1561070791-4c9b95a9e2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Packaging Design" class="design-img">
+                    <div class="design-info">
+                        <h3>Product Packaging</h3>
+                        <p>Sustainable packaging design for an organic skincare line.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 5 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80" alt="Event Poster" class="design-img">
+                    <div class="design-info">
+                        <h3>Art Exhibition Poster</h3>
+                        <p>Minimalist poster for a contemporary art exhibition.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 6 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1768&q=80" alt="Magazine Layout" class="design-img">
+                    <div class="design-info">
+                        <h3>Magazine Spread</h3>
+                        <p>Editorial layout design for a lifestyle magazine feature.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 7 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1831&q=80" alt="Social Media Graphics" class="design-img">
+                    <div class="design-info">
+                        <h3>Social Media Campaign</h3>
+                        <p>Series of graphics for a month-long social media campaign.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 8 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Website Mockup" class="design-img">
+                    <div class="design-info">
+                        <h3>Website Homepage Design</h3>
+                        <p>Modern website homepage design for a tech startup.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 9 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Apparel Design" class="design-img">
+                    <div class="design-info">
+                        <h3>Apparel Graphics</h3>
+                        <p>T-shirt and merchandise designs for a streetwear brand.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 10 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Annual Report" class="design-img">
+                    <div class="design-info">
+                        <h3>Corporate Annual Report</h3>
+                        <p>80-page annual report design with infographics and photography.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 11 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Menu Design" class="design-img">
+                    <div class="design-info">
+                        <h3>Restaurant Menu Design</h3>
+                        <p>Creative menu design for a fine dining restaurant.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 12 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80" alt="Business Cards" class="design-img">
+                    <div class="design-info">
+                        <h3>Business Card Series</h3>
+                        <p>Premium business card designs for a creative agency team.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 13 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1832&q=80" alt="Infographic" class="design-img">
+                    <div class="design-info">
+                        <h3>Data Infographic</h3>
+                        <p>Complex data visualization for a research publication.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 14 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Billboard Design" class="design-img">
+                    <div class="design-info">
+                        <h3>Outdoor Billboard</h3>
+                        <p>Large format billboard design for a city-wide campaign.</p>
+                    </div>
+                </div>
+                
+                <!-- Design 15 -->
+                <div class="design-item">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brochure Design" class="design-img">
+                    <div class="design-info">
+                        <h3>Travel Brochure</h3>
+                        <p>Tri-fold travel brochure for a luxury tour company.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Projects Section -->
+    <section id="ui-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Digital Design</span>
+                <h2>UI/UX, Mobile & Web Design</h2>
+            </div>
+            
+            <div class="projects-container">
+                <!-- UI Project 1 -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80" alt="Fitness App" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-smartphone-line"></i> Mobile App UI/UX</span>
+                        <h3>Fitness Tracking App</h3>
+                        <p>Complete UI/UX design for a fitness tracking app with workout plans and progress analytics.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Mobile First</span>
+                            <span class="tag">User Testing</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Jan 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UI Project 2 -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1715&q=80" alt="E-commerce Website" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-window-line"></i> E-commerce Website</span>
+                        <h3>Lifestyle Brand E-commerce</h3>
+                        <p>Full website design for a lifestyle brand with product pages, cart, and checkout flow.</p>
+                        <div class="project-tags">
+                            <span class="tag">Adobe XD</span>
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Feb 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UI Project 3 -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Banking App" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-smartphone-line"></i> Banking App</span>
+                        <h3>Digital Banking Interface</h3>
+                        <p>Mobile banking app design with secure login, transaction history, and money transfer features.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Fintech</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Mar 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UI Project 4 -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Travel App" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-smartphone-line"></i> Travel Planning App</span>
+                        <h3>Adventure Travel Companion</h3>
+                        <p>Travel app UI/UX with itinerary planning, booking integration, and local recommendations.</p>
+                        <div class="project-tags">
+                            <span class="tag">Adobe XD</span>
+                            <span class="tag">Travel</span>
+                            <span class="tag">Booking</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Apr 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UI Project 5 -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Food Delivery App" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-smartphone-line"></i> Food Delivery App</span>
+                        <h3>Restaurant Delivery Service</h3>
+                        <p>Food delivery app design with restaurant browsing, cart management, and live order tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Food Delivery</span>
+                            <span class="tag">Real-time</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">May 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UI Project 6 -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Health Dashboard" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-window-line"></i> Healthcare Dashboard</span>
+                        <h3>Medical Records Interface</h3>
+                        <p>Healthcare provider dashboard for managing patient records, appointments, and prescriptions.</p>
+                        <div class="project-tags">
+                            <span class="tag">Adobe XD</span>
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Jun 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UI Project 7 -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Social Media App" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-smartphone-line"></i> Social Media App</span>
+                        <h3>Creative Community Platform</h3>
+                        <p>Social media app for creative professionals to share work, collaborate, and network.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Social Media</span>
+                            <span class="tag">Community</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Jul 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UI Project 8 -->
+                <div class="project-card">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Educational Platform" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type"><i class="ri-window-line"></i> Educational Platform</span>
+                        <h3>Online Learning Portal</h3>
+                        <p>Web platform for online courses with video lessons, quizzes, and progress tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Adobe XD</span>
+                            <span class="tag">Education</span>
+                            <span class="tag">E-learning</span>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
+                            </div>
+                            <div class="project-date">Aug 2023</div>
                         </div>
                     </div>
                 </div>
@@ -1299,7 +1905,7 @@
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <p>I'm currently open to new opportunities, interesting projects, and collaborations. Feel free to reach out if you'd like to work together or just say hello!</p>
+                    <p>I'm available for freelance video production, design projects, and creative direction. Let's discuss how we can bring your vision to life!</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -1307,7 +1913,7 @@
                             </div>
                             <div>
                                 <h3>Email</h3>
-                                <p>alex.johnson@example.com</p>
+                                <p>alex@creativeportfolio.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1316,7 +1922,7 @@
                             </div>
                             <div>
                                 <h3>Phone</h3>
-                                <p>+1 (555) 123-4567</p>
+                                <p>+1 (555) 987-6543</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1324,16 +1930,17 @@
                                 <i class="ri-map-pin-line"></i>
                             </div>
                             <div>
-                                <h3>Location</h3>
-                                <p>San Francisco, California</p>
+                                <h3>Studio Location</h3>
+                                <p>Brooklyn, New York</p>
                             </div>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="ri-github-fill"></i></a>
-                        <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#" class="social-link"><i class="ri-twitter-fill"></i></a>
                         <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                        <a href="#" class="social-link"><i class="ri-youtube-fill"></i></a>
+                        <a href="#" class="social-link"><i class="ri-behance-fill"></i></a>
+                        <a href="#" class="social-link"><i class="ri-dribbble-line"></i></a>
+                        <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -1347,14 +1954,16 @@
                         <div class="form-group">
                             <select required>
                                 <option value="" disabled selected>Project Type</option>
-                                <option value="web">Web Development</option>
-                                <option value="mobile">Mobile App</option>
-                                <option value="consultation">Consultation</option>
+                                <option value="video">Video Production</option>
+                                <option value="editing">Video Editing</option>
+                                <option value="design">Graphic Design</option>
+                                <option value="uiux">UI/UX Design</option>
+                                <option value="branding">Branding</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" required></textarea>
+                            <textarea placeholder="Tell me about your project..." required></textarea>
                         </div>
                         <button type="submit" class="btn"><i class="ri-send-plane-line"></i> Send Message</button>
                     </form>
@@ -1369,10 +1978,10 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <i class="ri-code-s-slash-line"></i>
-                        <span>Alex Johnson</span>
+                        <i class="ri-camera-3-line"></i>
+                        <span>Alex Morgan</span>
                     </div>
-                    <p>Full Stack Developer specializing in modern web technologies and creating exceptional digital experiences.</p>
+                    <p>Video Producer & Visual Designer creating compelling visual stories across multiple mediums.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Quick Links</h3>
@@ -1380,23 +1989,25 @@
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#video-projects">Video Projects</a></li>
+                        <li><a href="#design-projects">Design Projects</a></li>
+                        <li><a href="#ui-projects">UI/UX Projects</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile App Development</a></li>
+                        <li><a href="#">Video Production</a></li>
+                        <li><a href="#">Video Editing</a></li>
+                        <li><a href="#">Motion Graphics</a></li>
+                        <li><a href="#">Graphic Design</a></li>
                         <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Consulting</a></li>
-                        <li><a href="#">Technical Training</a></li>
+                        <li><a href="#">Brand Identity</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Alex Johnson. All rights reserved.</p>
+                <p>&copy; <span id="currentYear">2023</span> Alex Morgan. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1414,6 +2025,10 @@
         const modalVideo = document.getElementById('modalVideo');
         const contactForm = document.getElementById('contactForm');
         const skillBars = document.querySelectorAll('.skill-level');
+        const currentYear = document.getElementById('currentYear');
+        
+        // Set current year
+        currentYear.textContent = new Date().getFullYear();
         
         // Mobile Menu Toggle
         menuToggle.addEventListener('click', () => {
@@ -1439,7 +2054,7 @@
             animateSkillBars();
         });
         
-        // Project filtering
+        // Project filtering for video section
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 // Remove active class from all buttons
@@ -1448,8 +2063,9 @@
                 btn.classList.add('active');
                 
                 const filter = btn.getAttribute('data-filter');
+                const videoProjectsContainer = document.getElementById('video-projects').querySelector('.projects-container');
                 
-                projectCards.forEach(card => {
+                videoProjectsContainer.querySelectorAll('.project-card').forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
                         card.style.display = 'block';
                     } else {
@@ -1524,9 +2140,6 @@
                 }
             });
         });
-        
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
