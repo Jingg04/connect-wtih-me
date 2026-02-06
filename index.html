@@ -1,120 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect with Me</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@300;700&display=swap');
-        
-        body {
-            font-family: 'Kaushan Script', cursive;
-            background: url('https://wallpapercave.com/wp/wp7417142.jpg') no-repeat center center/cover;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
-        .snow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            width: 100%;
-            max-width: 800px;
-        }
-        h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: #ffcc00;
-            text-shadow: 3px 3px 10px rgba(255, 204, 0, 0.8);
-            width: 100%;
-        }
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            width: 100%;
-        }
-        .social-links a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-            border-color: yellow;
-        }
-        .snowflake {
-            position: absolute;
-            top: -10px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: snowfall linear infinite;
-        }
-        @keyframes snowfall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 30px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #1e293b;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #cbd5e1;
+    }
+
+    /* ===== SECTION ===== */
+    section {
+      background: #fff;
+      margin: 20px 0;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      color: #1e293b;
+      border-left: 5px solid #3b82f6;
+      padding-left: 10px;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #3b82f6;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== PROJECTS ===== */
+    .project {
+      margin-bottom: 15px;
+    }
+
+    .project h3 {
+      color: #111827;
+    }
+
+    .project p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact p {
+      margin-bottom: 8px;
+    }
+
+    .contact a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="snow"></div>
-    <div class="container">
-        <h1>Connect with Me</h1>
-        <ul class="social-links">
-            <li><a href="https://web.facebook.com/uronly1jing/" class="facebook" target="_blank">Facebook</a></li>
-            <li><a href="https://www.twitter.com/Jing200424" class="twitter" target="_blank">Twitter</a></li>
-            <li><a href="https://www.instagram.com/p/CI5sf8dF2vN/" class="instagram" target="_blank">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/ssn-tube-0394741a2" class="linkedin" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.tiktok.com/@fb_andreww" class="tiktok" target="_blank">TikTok</a></li>
-            <li><a href="https://t.me/Ucancallmejing" class="telegram" target="_blank">Telegram</a></li>
-            <li><a href="mailto:pardpand@gmail.com" class="gmail" target="_blank">Gmail</a></li>
-        </ul>
-    </div>
-    <audio autoplay loop>
-        <source src="2MDIE - ឆាឆាឆា ( CHA CHA CHA ) FT. McSeyCG Official Audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <script>
-        function createSnowflakes() {
-            const snowContainer = document.querySelector('.snow');
-            for (let i = 0; i < 100; i++) {
-                const snowflake = document.createElement('div');
-                snowflake.classList.add('snowflake');
-                snowflake.style.width = Math.random() * 5 + 'px';
-                snowflake.style.height = snowflake.style.width;
-                snowflake.style.left = Math.random() * 100 + 'vw';
-                snowflake.style.animationDuration = (Math.random() * 5 + 3) + 's';
-                snowContainer.appendChild(snowflake);
-            }
-        }
-        createSnowflakes();
-    </script>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer | Designer | Student</p>
+  </header>
+
+  <div class="container">
+
+    <!-- ABOUT -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a motivated web developer with a passion for creating clean,
+        responsive, and user-friendly websites. I enjoy learning new
+        technologies and improving my skills.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">PHP</div>
+        <div class="skill">MySQL</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A simple personal portfolio built using HTML and CSS.</p>
+      </div>
+
+      <div class="project">
+        <h3>E-commerce Website</h3>
+        <p>Online shopping platform with product listing and cart system.</p>
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+      <p>Phone: +855 12 345 678</p>
+      <p>GitHub: <a href="#">github.com/yourname</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Your Name. All rights reserved.
+  </footer>
+
 </body>
 </html>
