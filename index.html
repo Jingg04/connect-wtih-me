@@ -3,2142 +3,1040 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Portfolio | Video Producer & Designer</title>
+    <title>Srey Samnang CV | Video Editor & IT Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
     <style>
-        /* Reset and base styles */
+        /* ENORMOUS RESET */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', sans-serif;
+            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="%2300ffff" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="%23ff00ff"/></svg>') 16 16, auto;
         }
-        
+
         :root {
-            --primary-color: #8B5CF6;
-            --secondary-color: #7C3AED;
-            --accent-color: #F59E0B;
-            --dark-color: #1F2937;
-            --light-color: #F9FAFB;
-            --text-color: #374151;
-            --text-light: #6B7280;
-            --card-bg: #ffffff;
-            --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --border-radius: 16px;
+            --neon-pink: #ff00ff;
+            --neon-blue: #00ffff;
+            --neon-green: #00ff00;
+            --neon-yellow: #ffff00;
+            --neon-purple: #bf00ff;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #000000;
+            --panel-bg: rgba(10, 10, 30, 0.95);
+            --glow-pink: 0 0 30px var(--neon-pink), 0 0 60px var(--neon-pink), 0 0 100px var(--neon-pink);
+            --glow-blue: 0 0 30px var(--neon-blue), 0 0 60px var(--neon-blue), 0 0 100px var(--neon-blue);
+            --glow-green: 0 0 30px var(--neon-green), 0 0 60px var(--neon-green), 0 0 100px var(--neon-green);
+            --glow-yellow: 0 0 30px var(--neon-yellow), 0 0 60px var(--neon-yellow), 0 0 100px var(--neon-yellow);
+            --glow-purple: 0 0 30px var(--neon-purple), 0 0 60px var(--neon-purple), 0 0 100px var(--neon-purple);
         }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+
+        /* ENORMOUS BODY */
         body {
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-color);
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Orbitron', 'Courier New', monospace;
+            min-height: 100vh;
+            width: 100vw;
             overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 0, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 40% 80%, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 0, 255, 0.03) 2px,
+                    rgba(255, 0, 255, 0.03) 4px
+                );
         }
-        
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--dark-color);
+
+        /* ENORMOUS NEON SKY - FULLSCREEN */
+        .neon-sky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -100;
+            overflow: hidden;
         }
-        
-        h1 {
-            font-size: 3.5rem;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
+
+        /* ENORMOUS HEADER */
+        .header {
             text-align: center;
-            margin-bottom: 3rem;
+            padding: 2rem 0 1rem;
             position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
+            z-index: 100;
         }
-        
-        h2::after {
-            content: '';
-            position: absolute;
+
+        .main-title {
+            font-size: 4.5rem;
+            letter-spacing: 0.8rem;
+            text-transform: uppercase;
+            color: var(--neon-blue);
+            text-shadow: var(--glow-blue);
+            animation: flicker 2s infinite alternate;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 2.2rem;
+            color: var(--neon-pink);
+            text-shadow: 0 0 20px var(--neon-pink);
+            letter-spacing: 0.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .title-divider {
             width: 60%;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), transparent);
-            bottom: -10px;
-            left: 20%;
-            border-radius: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+            margin: 1rem auto;
+            box-shadow: 0 0 20px var(--neon-green);
         }
-        
-        h3 {
-            font-size: 1.5rem;
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow: var(--glow-blue);
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+                opacity: 0.7;
+            }
         }
-        
-        p {
-            margin-bottom: 1rem;
-            color: var(--text-light);
-            font-size: 1.05rem;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
+
+        /* ENORMOUS CONTAINER */
         .container {
-            width: 90%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        section {
-            padding: 6rem 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-subtitle {
-            color: var(--primary-color);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            box-shadow: none;
-        }
-        
-        .btn-outline:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: var(--transition);
-        }
-        
-        header.scrolled {
-            padding: 5px 0;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .logo span {
-            color: var(--primary-color);
-        }
-        
-        .logo i {
-            font-size: 2rem;
-            color: var(--primary-color);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            font-weight: 600;
-            font-size: 1.05rem;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--dark-color);
-        }
-        
-        /* Hero Section */
-        #hero {
-            padding-top: 12rem;
-            background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        #hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.05) 100%);
-            top: -200px;
-            right: -100px;
-            z-index: 0;
-        }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero-text {
-            flex: 1;
-            padding-right: 3rem;
-        }
-        
-        .hero-image {
-            flex: 1;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero-image img {
-            max-width: 100%;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            border: 8px solid white;
-            transform: perspective(1000px) rotateY(-10deg);
-            transition: var(--transition);
-        }
-        
-        .hero-image img:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-        
-        .hero-text p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-        
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .hero-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(31, 41, 55, 0.1);
-        }
-        
-        .stat {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            display: block;
-            line-height: 1;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* About Section */
-        #about {
-            background-color: white;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            width: 100vw;
+            min-height: 75vh;
+            padding: 0 4rem 4rem;
             gap: 4rem;
-            align-items: center;
-        }
-        
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .service-tag {
-            background-color: #F5F3FF;
-            padding: 0.8rem 1.2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-        
-        .service-tag:hover {
-            background-color: #EDE9FE;
-            transform: translateY(-3px);
-        }
-        
-        .service-tag i {
-            color: var(--primary-color);
-        }
-        
-        /* Skills Section */
-        #skills {
-            background-color: #f8fafc;
-        }
-        
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-        
-        .skill-category {
-            background-color: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .skill-category i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-        
-        .skill-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-        
-        .skill-bar {
-            height: 8px;
-            background-color: #e2e8f0;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .skill-level {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: 4px;
-            width: 0;
-            transition: width 1.5s ease-out;
-        }
-        
-        /* Projects Section */
-        #projects {
-            background-color: white;
-        }
-        
-        .projects-filter {
-            display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
+            align-items: flex-start;
         }
-        
-        .filter-btn {
-            padding: 0.6rem 1.5rem;
-            background-color: #f1f5f9;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-        }
-        
-        .filter-btn.active, .filter-btn:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+
+        /* ENORMOUS LEFT PANEL - CV INFO */
+        .left-panel {
+            flex: 1;
+            min-width: 500px;
+            display: flex;
+            flex-direction: column;
             position: relative;
         }
-        
-        .project-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .project-media {
-            height: 220px;
-            width: 100%;
-            overflow: hidden;
+
+        .cv-container {
+            background-color: var(--panel-bg);
+            border: 4px solid var(--neon-green);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--glow-green);
+            margin-bottom: 2rem;
+            flex-grow: 1;
+            backdrop-filter: blur(10px);
             position: relative;
+            overflow: hidden;
         }
-        
-        .project-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .project-card:hover .project-img {
-            transform: scale(1.05);
-        }
-        
-        .project-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .video-play-btn {
+
+        .cv-container::before {
+            content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, var(--neon-green), var(--neon-blue));
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.3;
+        }
+
+        .cv-title {
+            color: var(--neon-green);
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            text-shadow: 0 0 20px var(--neon-green);
+            font-weight: 800;
+            letter-spacing: 0.3rem;
+        }
+
+        /* CV SECTIONS */
+        .cv-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .section-title {
+            color: var(--neon-blue);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 2;
-        }
-        
-        .video-play-btn:hover {
-            background-color: white;
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-        
-        .project-info {
-            padding: 1.8rem;
-        }
-        
-        .project-info h3 {
-            margin-bottom: 0.8rem;
-            font-size: 1.3rem;
-        }
-        
-        .project-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #f1f5f9;
-        }
-        
-        .project-type {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.9rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .project-links {
-            display: flex;
             gap: 1rem;
         }
-        
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #f1f5f9;
-            color: var(--dark-color);
-            transition: var(--transition);
+
+        .section-title i {
+            color: var(--neon-pink);
+            font-size: 1.8rem;
         }
-        
-        .project-link:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-3px);
+
+        .info-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--neon-purple);
         }
-        
-        .project-tags {
+
+        .info-item h4 {
+            color: var(--neon-yellow);
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p, .info-item li {
+            color: #ccc;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item ul {
+            padding-left: 2rem;
+        }
+
+        .highlight {
+            color: var(--neon-yellow);
+            font-weight: bold;
+        }
+
+        .current-role {
+            color: var(--neon-green);
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* SKILL TAGS */
+        .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 1rem;
             margin-top: 1rem;
         }
-        
-        .tag {
-            background-color: #F5F3FF;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            color: var(--primary-color);
-            font-weight: 500;
+
+        .skill-tag {
+            background-color: rgba(0, 255, 255, 0.1);
+            color: var(--neon-blue);
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            font-size: 1.3rem;
+            border: 1px solid var(--neon-blue);
+            transition: all 0.3s;
         }
-        
-        /* Portfolio Grid for Posters/Designs */
-        .design-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
+
+        .skill-tag:hover {
+            background-color: var(--neon-blue);
+            color: black;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px var(--neon-blue);
         }
-        
-        .design-item {
-            border-radius: var(--border-radius);
+
+        /* CONTACT BUTTON */
+        .contact-btn {
+            display: block;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: var(--darker-bg);
+            padding: 1.8rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.4s;
+            border: none;
+            box-shadow: var(--glow-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px var(--neon-blue), 0 0 80px var(--neon-purple);
+            letter-spacing: 0.5rem;
+        }
+
+        /* ENORMOUS RIGHT PANEL - PORTFOLIO */
+        .right-panel {
+            flex: 1.5;
+            min-width: 700px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* PORTFOLIO SHOWCASE */
+        .portfolio-showcase {
+            background-color: var(--panel-bg);
+            border: 4px solid var(--neon-pink);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--glow-pink);
+            margin-bottom: 3rem;
+            flex-grow: 1;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-showcase::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.3;
+        }
+
+        .portfolio-title {
+            color: var(--neon-pink);
+            font-size: 3.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px var(--neon-pink);
+            font-weight: 900;
+            letter-spacing: 0.3rem;
+            text-align: center;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--neon-blue), var(--neon-pink));
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--neon-yellow);
+            box-shadow: 0 0 15px var(--neon-yellow);
+        }
+
+        .timeline-date {
+            color: var(--neon-green);
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--neon-purple);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 0 15px rgba(191, 0, 255, 0.3);
+        }
+
+        .timeline-content h4 {
+            color: var(--neon-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-content p {
+            color: #ccc;
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+
+        /* VIDEO EDITOR DISPLAY */
+        .video-editor-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem 0;
+            height: 250px;
             position: relative;
         }
-        
-        .design-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+
+        .video-center {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        
-        .design-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+
+        .video-orb {
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle at 30% 30%, var(--neon-blue), transparent);
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid var(--neon-purple);
+            box-shadow: 0 0 60px var(--neon-purple);
+            animation: orbGlow 3s infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            color: var(--neon-yellow);
         }
-        
-        .design-item:hover .design-img {
-            transform: scale(1.05);
+
+        @keyframes orbGlow {
+            0% { box-shadow: 0 0 30px var(--neon-purple); }
+            100% { box-shadow: 0 0 80px var(--neon-purple), 0 0 120px var(--neon-pink); }
         }
-        
-        .design-info {
-            padding: 1.5rem;
-            background-color: white;
+
+        .software-item {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--neon-green);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            animation: orbit 25s linear infinite;
+            animation-delay: calc(var(--i) * -6s);
         }
-        
-        /* Video Modal */
-        .video-modal {
-            display: none;
+
+        @keyframes orbit {
+            0% { 
+                transform: rotate(0deg) translateX(220px) rotate(0deg); 
+            }
+            100% { 
+                transform: rotate(360deg) translateX(220px) rotate(-360deg); 
+            }
+        }
+
+        /* ENORMOUS FOOTER */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-top: 3px solid var(--neon-yellow);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .social-link {
+            color: white;
+            font-size: 2.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--neon-pink);
+            transform: scale(1.2);
+            text-shadow: 0 0 20px var(--neon-pink);
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 1.5rem;
+        }
+
+        /* SCAN LINES EFFECT */
+        .scanlines {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(0, 255, 255, 0.03) 50%
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.5;
         }
-        
-        .video-modal.active {
-            display: flex;
+
+        /* ENORMOUS RESPONSIVE */
+        @media (max-width: 1400px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .left-panel, .right-panel {
+                min-width: 90%;
+                max-width: 1200px;
+            }
+            
+            .main-title { font-size: 3.5rem; }
+            .subtitle { font-size: 1.8rem; }
         }
-        
-        .modal-content {
-            width: 90%;
-            max-width: 900px;
-            position: relative;
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem 2rem;
+            }
+            
+            .main-title { font-size: 2.8rem; letter-spacing: 0.5rem; }
+            .subtitle { font-size: 1.5rem; }
+            
+            .cv-title, .portfolio-title { font-size: 2.2rem; }
+            
+            .cv-container, .portfolio-showcase {
+                padding: 2rem;
+            }
+            
+            .video-center {
+                transform: scale(0.8);
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
         }
-        
-        .modal-video {
-            width: 100%;
+
+        /* ENORMOUS SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
         }
-        
-        .close-modal {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .close-modal:hover {
-            color: var(--accent-color);
-        }
-        
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--dark-color) 0%, #111827 100%);
-            color: white;
-        }
-        
-        #contact h2, #contact .section-subtitle {
-            color: white;
-        }
-        
-        #contact p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--accent-color);
-        }
-        
-        .contact-form {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 2.5rem;
-            border-radius: var(--border-radius);
-            backdrop-filter: blur(10px);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: rgba(255, 255, 255, 0.05);
-            color: white;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            background-color: rgba(255, 255, 255, 0.08);
-        }
-        
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #111827;
-            color: white;
-            padding: 4rem 0 2rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links h3 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .footer-links ul {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            transition: var(--transition);
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-        
-        .social-link:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .projects-container {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            }
-            
-            .design-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-        }
-        
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 3rem;
-            }
-            
-            h2 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-content, .about-content, .contact-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .hero-text {
-                padding-right: 0;
-                text-align: center;
-            }
-            
-            .hero-btns {
-                justify-content: center;
-            }
-            
-            .hero-stats {
-                justify-content: center;
-            }
-            
-            .about-services {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem 0;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                transform: translateY(-150%);
-                transition: transform 0.5s ease;
-                z-index: 999;
-                gap: 0;
-            }
-            
-            .nav-links.active {
-                transform: translateY(0);
-            }
-            
-            .nav-links li {
-                margin: 1rem 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            .nav-links a {
-                display: block;
-                padding: 1rem;
-            }
-            
-            .nav-links a::after {
-                display: none;
-            }
-            
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .design-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
-            
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-            
-            section {
-                padding: 4rem 0;
-            }
-            
-            #hero {
-                padding-top: 10rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .btn {
-                padding: 12px 24px;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .hero-stats {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .design-grid {
-                grid-template-columns: 1fr;
-            }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
+            border-radius: 10px;
+            box-shadow: 0 0 20px var(--neon-pink);
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header id="header">
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <i class="ri-camera-3-line"></i>
-                    <span>Creative Portfolio</span>
-                </div>
-                <div class="menu-toggle" id="menuToggle">
-                    <i class="ri-menu-line"></i>
-                </div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#video-projects">Video Projects</a></li>
-                    <li><a href="#design-projects">Design Projects</a></li>
-                    <li><a href="#ui-projects">UI/UX Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <span class="section-subtitle">Creative Professional</span>
-                    <h1>Alex Morgan</h1>
-                    <h2>Video Producer & Visual Designer</h2>
-                    <p>I create compelling visual stories through video production, graphic design, and user experience design. With 8+ years of experience, I've worked with brands, startups, and creative agencies to deliver impactful visual content.</p>
-                    <div class="hero-btns">
-                        <a href="#video-projects" class="btn"><i class="ri-video-line"></i> View Video Work</a>
-                        <a href="#contact" class="btn btn-outline"><i class="ri-mail-line"></i> Hire Me</a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">150+</span>
-                            <span class="stat-label">Video Projects</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">200+</span>
-                            <span class="stat-label">Design Projects</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">8+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
+    <!-- ENORMOUS NEON SKY -->
+    <div class="neon-sky" id="neonSky"></div>
+    
+    <!-- ENORMOUS HEADER -->
+    <div class="header">
+        <h1 class="main-title">SREY SAMNANG</h1>
+        <div class="subtitle">VIDEO EDITOR & IT SPECIALIST</div>
+        <div class="title-divider"></div>
+    </div>
+    
+    <!-- ENORMOUS CONTAINER -->
+    <div class="container">
+        <!-- ENORMOUS LEFT PANEL - CV INFO -->
+        <div class="left-panel">
+            <div class="cv-container">
+                <div class="cv-title">PROFESSIONAL PROFILE</div>
+                
+                <div class="cv-section">
+                    <h3 class="section-title"><i class="fas fa-user"></i> ABOUT ME</h3>
+                    <div class="info-item">
+                        <p>Motivated and creative Video Editor & IT Support trainee with experience in producing engaging promotional content for The University of Cambodia and the ICT Professional Training Center. Skilled in Adobe Premiere Pro, CapCut, Photoshop, Illustrator, and color grading.</p>
+                        <p>Strong background in Facebook page management, digital communication, and basic UX/UI design using Figma. Additional experience in Android development, Microsoft Office, general IT support, and teamwork across multimedia projects.</p>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Video Producer">
+                
+                <div class="cv-section">
+                    <h3 class="section-title"><i class="fas fa-graduation-cap"></i> EDUCATION</h3>
+                    <div class="info-item">
+                        <h4>THE UNIVERSITY OF CAMBODIA</h4>
+                        <p><span class="highlight">2022 - 2026</span> | Bachelor of Information Technology (4-Year Program)</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>HUN SEN CHAMKADONG HIGH SCHOOL</h4>
+                        <p><span class="highlight">Graduated 2021</span> | Grade C Student of Academic Year 2020-2021</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>SOVANNA PHUMI SCHOOL</h4>
+                        <p><span class="highlight">2022-2024</span> | English Part-Time Course (Level 11B)</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>ICT PROFESSIONAL TRAINING CENTER</h4>
+                        <p><span class="highlight">2025</span> | Web Development Frontend</p>
+                    </div>
                 </div>
+                
+                <div class="cv-section">
+                    <h3 class="section-title"><i class="fas fa-code"></i> SKILLS</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Adobe Premiere Pro</span>
+                        <span class="skill-tag">CapCut</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Illustrator</span>
+                        <span class="skill-tag">Color Grading (50%)</span>
+                        <span class="skill-tag">UX/UI Design</span>
+                        <span class="skill-tag">Videography</span>
+                        <span class="skill-tag">IT Support</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Adobe Lightroom</span>
+                        <span class="skill-tag">After Effects (Basic)</span>
+                        <span class="skill-tag">MS Office</span>
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Social Media Management</span>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3 class="section-title"><i class="fas fa-phone"></i> CONTACT</h3>
+                    <div class="info-item">
+                        <p><i class="fas fa-phone" style="color: var(--neon-green); margin-right: 10px;"></i> <span class="highlight">089 891 474</span></p>
+                        <p><i class="fas fa-envelope" style="color: var(--neon-blue); margin-right: 10px;"></i> <span class="highlight">samanngsrey0@gmail.com</span></p>
+                        <p><i class="fas fa-map-marker-alt" style="color: var(--neon-pink); margin-right: 10px;"></i> St.38 Phum Trea, Stoeng Mean Chey, Phnom Penh, Cambodia</p>
+                    </div>
+                </div>
+                
+                <button class="contact-btn" id="contactBtn">
+                    <i class="fas fa-paper-plane"></i> HIRE ME
+                </button>
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">About Me</span>
-                <h2>Creative Visionary</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a multidisciplinary creative specializing in video production, graphic design, and UI/UX design. My journey began with a film degree from NYU, followed by 8 years of working with diverse clients across industries.</p>
-                    <p>Currently, I work as a Creative Director at Visual Stories Agency, where I lead a team of 10 creatives producing video content, branding materials, and digital experiences for global clients.</p>
-                    <p>I believe in the power of visual storytelling to connect brands with their audiences. My approach combines technical expertise with artistic vision to create memorable experiences.</p>
-                    <div class="about-services">
-                        <span class="service-tag"><i class="ri-video-line"></i> Video Production</span>
-                        <span class="service-tag"><i class="ri-scissors-line"></i> Video Editing</span>
-                        <span class="service-tag"><i class="ri-brush-line"></i> Graphic Design</span>
-                        <span class="service-tag"><i class="ri-layout-line"></i> UI/UX Design</span>
-                        <span class="service-tag"><i class="ri-smartphone-line"></i> Mobile App Design</span>
-                        <span class="service-tag"><i class="ri-window-line"></i> Web Design</span>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Creative Studio" style="width:100%; border-radius:var(--border-radius);">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">My Expertise</span>
-                <h2>Technical Skills</h2>
-            </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <i class="ri-video-line"></i>
-                    <h3>Video Production</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Premiere Pro</span>
-                            <span>98%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="98"></div>
+        
+        <!-- ENORMOUS RIGHT PANEL - PORTFOLIO -->
+        <div class="right-panel">
+            <div class="portfolio-showcase">
+                <h2 class="portfolio-title">EXPERIENCE & PROJECTS</h2>
+                
+                <!-- TIMELINE -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date"><span class="current-role">December 2025 - Present</span></div>
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-briefcase" style="color: var(--neon-green); margin-right: 10px;"></i> KiuQ Company</h4>
+                            <p>Currently working as a Video Editor and Multimedia Specialist. Responsibilities include video production, editing, and content creation for digital marketing campaigns.</p>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>After Effects</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>DaVinci Resolve</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="90"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">May - November 2025</div>
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-video" style="color: var(--neon-blue); margin-right: 10px;"></i> Video Editor Internship</h4>
+                            <p>ICT Professional Training Center - Video editing, photo editing using Adobe Lightroom, and managing content for video promotion.</p>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Cinematography</span>
-                            <span>92%</span>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">January - July 2025</div>
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-film" style="color: var(--neon-pink); margin-right: 10px;"></i> Promotional Video Editor Intern</h4>
+                            <p>University of Cambodia - Created promotional videos and served as videographer for university events and marketing materials.</p>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="92"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">February 23-25, 2024</div>
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-hands-helping" style="color: var(--neon-yellow); margin-right: 10px;"></i> IT Support Volunteer</h4>
+                            <p>19th Annual CamTESOL Conference on English Language Teaching - Provided technical support and assistance during the conference.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-users" style="color: var(--neon-purple); margin-right: 10px;"></i> Volunteer Youth Kayarith of Cambodia</h4>
+                            <p>Participated in community service and youth development programs.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="skill-category">
-                    <i class="ri-pencil-ruler-line"></i>
-                    <h3>Design & Graphics</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Photoshop</span>
-                            <span>96%</span>
+                <!-- VIDEO EDITOR DISPLAY -->
+                <div class="video-editor-display">
+                    <div class="video-center">
+                        <div class="video-orb">
+                            <i class="fas fa-film"></i>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="96"></div>
+                        <div class="software-item" style="--i: 0">
+                            <i class="fab fa-adobe" style="color: var(--neon-pink); font-size: 2rem;"></i>
+                            <div style="font-size: 1rem; margin-top: 0.5rem;">Premiere Pro</div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Illustrator</span>
-                            <span>94%</span>
+                        <div class="software-item" style="--i: 1">
+                            <i class="fas fa-cut" style="color: var(--neon-blue); font-size: 2rem;"></i>
+                            <div style="font-size: 1rem; margin-top: 0.5rem;">CapCut</div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="94"></div>
+                        <div class="software-item" style="--i: 2">
+                            <i class="fab fa-adobe" style="color: var(--neon-green); font-size: 2rem;"></i>
+                            <div style="font-size: 1rem; margin-top: 0.5rem;">Photoshop</div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>InDesign</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Motion Graphics</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="90"></div>
+                        <div class="software-item" style="--i: 3">
+                            <i class="fab fa-figma" style="color: var(--neon-yellow); font-size: 2rem;"></i>
+                            <div style="font-size: 1rem; margin-top: 0.5rem;">Figma</div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="skill-category">
-                    <i class="ri-layout-line"></i>
-                    <h3>UI/UX Design</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Figma</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Adobe XD</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Prototyping</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="92"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>User Research</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" data-width="85"></div>
-                        </div>
+                <!-- SOCIAL MEDIA SECTION -->
+                <div class="cv-section" style="border-bottom: none; padding-bottom: 0;">
+                    <h3 class="section-title"><i class="fas fa-share-alt"></i> SOCIAL MEDIA MANAGEMENT</h3>
+                    <div class="info-item">
+                        <p><span class="highlight">2022-2025</span> | Facebook, Telegram and TikTok Management</p>
+                        <ul>
+                            <li>Set up schedule time for posting</li>
+                            <li>Posting Promotional Video and Poster</li>
+                            <li>Posting Video Content</li>
+                            <li>Facebook page management and digital communication</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Video Projects Section -->
-    <section id="video-projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Video Portfolio</span>
-                <h2>Video Production & Editing</h2>
-            </div>
-            
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All Videos</button>
-                <button class="filter-btn" data-filter="commercial">Commercial</button>
-                <button class="filter-btn" data-filter="corporate">Corporate</button>
-                <button class="filter-btn" data-filter="documentary">Documentary</button>
-                <button class="filter-btn" data-filter="music">Music Video</button>
-            </div>
-            
-            <div class="projects-container">
-                <!-- Video Project 1 -->
-                <div class="project-card" data-category="commercial">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project1">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80" alt="Tech Commercial" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Commercial Video</span>
-                        <h3>Tech Startup Product Launch</h3>
-                        <p>60-second commercial for a tech startup's new product, featuring cinematic shots and dynamic motion graphics.</p>
-                        <div class="project-tags">
-                            <span class="tag">Cinematic</span>
-                            <span class="tag">Motion Graphics</span>
-                            <span class="tag">Color Grading</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Jan 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 2 -->
-                <div class="project-card" data-category="corporate">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project2">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Corporate Video" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Corporate Video</span>
-                        <h3>Annual Company Report</h3>
-                        <p>10-minute corporate video summarizing annual achievements with interviews, b-roll, and animated infographics.</p>
-                        <div class="project-tags">
-                            <span class="tag">Interview</span>
-                            <span class="tag">Infographics</span>
-                            <span class="tag">Corporate</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Feb 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 3 -->
-                <div class="project-card" data-category="documentary">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project3">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Documentary" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Documentary</span>
-                        <h3>Urban Sustainability Stories</h3>
-                        <p>25-minute documentary exploring urban sustainability initiatives across five major cities.</p>
-                        <div class="project-tags">
-                            <span class="tag">Documentary</span>
-                            <span class="tag">Cinema Verite</span>
-                            <span class="tag">Sound Design</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Mar 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 4 -->
-                <div class="project-card" data-category="music">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project4">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Music Video" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Music Video</span>
-                        <h3>"Neon Dreams" - Indie Band</h3>
-                        <p>Music video for an indie band featuring creative lighting, practical effects, and narrative storytelling.</p>
-                        <div class="project-tags">
-                            <span class="tag">Music Video</span>
-                            <span class="tag">Creative Lighting</span>
-                            <span class="tag">Narrative</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Apr 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 5 -->
-                <div class="project-card" data-category="commercial">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project5">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80" alt="Fashion Commercial" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Fashion Commercial</span>
-                        <h3>Spring Collection Launch</h3>
-                        <p>30-second fashion commercial shot on location in Milan for a luxury brand's spring collection.</p>
-                        <div class="project-tags">
-                            <span class="tag">Fashion</span>
-                            <span class="tag">Location Shoot</span>
-                            <span class="tag">Color Grading</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">May 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 6 -->
-                <div class="project-card" data-category="corporate">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project6">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brand Story" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Brand Story</span>
-                        <h3>Founder's Journey Documentary</h3>
-                        <p>15-minute brand story video following the founder's journey from startup to successful enterprise.</p>
-                        <div class="project-tags">
-                            <span class="tag">Brand Story</span>
-                            <span class="tag">Entrepreneurship</span>
-                            <span class="tag">Interview</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Jun 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 7 -->
-                <div class="project-card" data-category="documentary">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project7">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Nature Documentary" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Nature Documentary</span>
-                        <h3>Coastal Ecosystems</h3>
-                        <p>40-minute documentary exploring coastal ecosystems and conservation efforts.</p>
-                        <div class="project-tags">
-                            <span class="tag">Nature</span>
-                            <span class="tag">Conservation</span>
-                            <span class="tag">Drone Footage</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Jul 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 8 -->
-                <div class="project-card" data-category="music">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project8">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Concert Film" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Concert Film</span>
-                        <h3>Live Festival Performance</h3>
-                        <p>Multi-camera concert film of a major music festival performance with 8K resolution.</p>
-                        <div class="project-tags">
-                            <span class="tag">Concert</span>
-                            <span class="tag">Live Performance</span>
-                            <span class="tag">Multi-camera</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Aug 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 9 -->
-                <div class="project-card" data-category="commercial">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project9">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Automotive Commercial" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Automotive Commercial</span>
-                        <h3>Electric Vehicle Campaign</h3>
-                        <p>Cinematic commercial for a new electric vehicle featuring dynamic driving shots and slow-motion sequences.</p>
-                        <div class="project-tags">
-                            <span class="tag">Automotive</span>
-                            <span class="tag">Cinematic</span>
-                            <span class="tag">Slow Motion</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Sep 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 10 -->
-                <div class="project-card" data-category="corporate">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project10">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Training Video" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Training Video</span>
-                        <h3>Employee Onboarding Series</h3>
-                        <p>Series of 12 training videos for new employee onboarding with animations and screen recordings.</p>
-                        <div class="project-tags">
-                            <span class="tag">Training</span>
-                            <span class="tag">Educational</span>
-                            <span class="tag">Animation</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Oct 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 11 -->
-                <div class="project-card" data-category="documentary">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project11">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Cultural Documentary" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Cultural Documentary</span>
-                        <h3>Traditional Craftsmanship</h3>
-                        <p>30-minute documentary exploring traditional craftsmanship techniques in Southeast Asia.</p>
-                        <div class="project-tags">
-                            <span class="tag">Cultural</span>
-                            <span class="tag">Traditional</span>
-                            <span class="tag">Artisan</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Nov 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Video Project 12 -->
-                <div class="project-card" data-category="music">
-                    <div class="project-media">
-                        <div class="video-play-btn" data-video="project12">
-                            <i class="ri-play-circle-line"></i>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Music Documentary" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-video-line"></i> Music Documentary</span>
-                        <h3>Recording Studio Sessions</h3>
-                        <p>Behind-the-scenes documentary of an album recording process in a famous studio.</p>
-                        <div class="project-tags">
-                            <span class="tag">Behind-the-Scenes</span>
-                            <span class="tag">Recording</span>
-                            <span class="tag">Studio</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-youtube-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Dec 2023</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Design Projects Section -->
-    <section id="design-projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Design Portfolio</span>
-                <h2>Graphic Design & Posters</h2>
-            </div>
-            
-            <div class="design-grid">
-                <!-- Design 1 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" alt="Music Festival Poster" class="design-img">
-                    <div class="design-info">
-                        <h3>Music Festival Poster</h3>
-                        <p>Vibrant poster design for a summer music festival with custom typography.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 2 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brand Identity" class="design-img">
-                    <div class="design-info">
-                        <h3>Brand Identity System</h3>
-                        <p>Complete brand identity including logo, color palette, and typography.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 3 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Book Cover" class="design-img">
-                    <div class="design-info">
-                        <h3>Book Cover Design</h3>
-                        <p>Cover design for a bestselling novel with custom illustration.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 4 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1561070791-4c9b95a9e2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Packaging Design" class="design-img">
-                    <div class="design-info">
-                        <h3>Product Packaging</h3>
-                        <p>Sustainable packaging design for an organic skincare line.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 5 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80" alt="Event Poster" class="design-img">
-                    <div class="design-info">
-                        <h3>Art Exhibition Poster</h3>
-                        <p>Minimalist poster for a contemporary art exhibition.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 6 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1768&q=80" alt="Magazine Layout" class="design-img">
-                    <div class="design-info">
-                        <h3>Magazine Spread</h3>
-                        <p>Editorial layout design for a lifestyle magazine feature.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 7 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1831&q=80" alt="Social Media Graphics" class="design-img">
-                    <div class="design-info">
-                        <h3>Social Media Campaign</h3>
-                        <p>Series of graphics for a month-long social media campaign.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 8 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Website Mockup" class="design-img">
-                    <div class="design-info">
-                        <h3>Website Homepage Design</h3>
-                        <p>Modern website homepage design for a tech startup.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 9 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Apparel Design" class="design-img">
-                    <div class="design-info">
-                        <h3>Apparel Graphics</h3>
-                        <p>T-shirt and merchandise designs for a streetwear brand.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 10 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Annual Report" class="design-img">
-                    <div class="design-info">
-                        <h3>Corporate Annual Report</h3>
-                        <p>80-page annual report design with infographics and photography.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 11 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Menu Design" class="design-img">
-                    <div class="design-info">
-                        <h3>Restaurant Menu Design</h3>
-                        <p>Creative menu design for a fine dining restaurant.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 12 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80" alt="Business Cards" class="design-img">
-                    <div class="design-info">
-                        <h3>Business Card Series</h3>
-                        <p>Premium business card designs for a creative agency team.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 13 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1832&q=80" alt="Infographic" class="design-img">
-                    <div class="design-info">
-                        <h3>Data Infographic</h3>
-                        <p>Complex data visualization for a research publication.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 14 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Billboard Design" class="design-img">
-                    <div class="design-info">
-                        <h3>Outdoor Billboard</h3>
-                        <p>Large format billboard design for a city-wide campaign.</p>
-                    </div>
-                </div>
-                
-                <!-- Design 15 -->
-                <div class="design-item">
-                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brochure Design" class="design-img">
-                    <div class="design-info">
-                        <h3>Travel Brochure</h3>
-                        <p>Tri-fold travel brochure for a luxury tour company.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- UI/UX Projects Section -->
-    <section id="ui-projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Digital Design</span>
-                <h2>UI/UX, Mobile & Web Design</h2>
-            </div>
-            
-            <div class="projects-container">
-                <!-- UI Project 1 -->
-                <div class="project-card">
-                    <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80" alt="Fitness App" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-smartphone-line"></i> Mobile App UI/UX</span>
-                        <h3>Fitness Tracking App</h3>
-                        <p>Complete UI/UX design for a fitness tracking app with workout plans and progress analytics.</p>
-                        <div class="project-tags">
-                            <span class="tag">Figma</span>
-                            <span class="tag">Mobile First</span>
-                            <span class="tag">User Testing</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Jan 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- UI Project 2 -->
-                <div class="project-card">
-                    <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1715&q=80" alt="E-commerce Website" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-window-line"></i> E-commerce Website</span>
-                        <h3>Lifestyle Brand E-commerce</h3>
-                        <p>Full website design for a lifestyle brand with product pages, cart, and checkout flow.</p>
-                        <div class="project-tags">
-                            <span class="tag">Adobe XD</span>
-                            <span class="tag">E-commerce</span>
-                            <span class="tag">Responsive</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Feb 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- UI Project 3 -->
-                <div class="project-card">
-                    <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Banking App" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-smartphone-line"></i> Banking App</span>
-                        <h3>Digital Banking Interface</h3>
-                        <p>Mobile banking app design with secure login, transaction history, and money transfer features.</p>
-                        <div class="project-tags">
-                            <span class="tag">Figma</span>
-                            <span class="tag">Fintech</span>
-                            <span class="tag">Security</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Mar 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- UI Project 4 -->
-                <div class="project-card">
-                    <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Travel App" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-smartphone-line"></i> Travel Planning App</span>
-                        <h3>Adventure Travel Companion</h3>
-                        <p>Travel app UI/UX with itinerary planning, booking integration, and local recommendations.</p>
-                        <div class="project-tags">
-                            <span class="tag">Adobe XD</span>
-                            <span class="tag">Travel</span>
-                            <span class="tag">Booking</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Apr 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- UI Project 5 -->
-                <div class="project-card">
-                    <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Food Delivery App" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-smartphone-line"></i> Food Delivery App</span>
-                        <h3>Restaurant Delivery Service</h3>
-                        <p>Food delivery app design with restaurant browsing, cart management, and live order tracking.</p>
-                        <div class="project-tags">
-                            <span class="tag">Figma</span>
-                            <span class="tag">Food Delivery</span>
-                            <span class="tag">Real-time</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">May 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- UI Project 6 -->
-                <div class="project-card">
-                    <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Health Dashboard" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-window-line"></i> Healthcare Dashboard</span>
-                        <h3>Medical Records Interface</h3>
-                        <p>Healthcare provider dashboard for managing patient records, appointments, and prescriptions.</p>
-                        <div class="project-tags">
-                            <span class="tag">Adobe XD</span>
-                            <span class="tag">Healthcare</span>
-                            <span class="tag">Dashboard</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Jun 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- UI Project 7 -->
-                <div class="project-card">
-                    <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Social Media App" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-smartphone-line"></i> Social Media App</span>
-                        <h3>Creative Community Platform</h3>
-                        <p>Social media app for creative professionals to share work, collaborate, and network.</p>
-                        <div class="project-tags">
-                            <span class="tag">Figma</span>
-                            <span class="tag">Social Media</span>
-                            <span class="tag">Community</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Jul 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- UI Project 8 -->
-                <div class="project-card">
-                    <div class="project-media">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Educational Platform" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type"><i class="ri-window-line"></i> Educational Platform</span>
-                        <h3>Online Learning Portal</h3>
-                        <p>Web platform for online courses with video lessons, quizzes, and progress tracking.</p>
-                        <div class="project-tags">
-                            <span class="tag">Adobe XD</span>
-                            <span class="tag">Education</span>
-                            <span class="tag">E-learning</span>
-                        </div>
-                        <div class="project-meta">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="ri-figma-fill"></i></a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i></a>
-                            </div>
-                            <div class="project-date">Aug 2023</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Modal -->
-    <div class="video-modal" id="videoModal">
-        <div class="modal-content">
-            <button class="close-modal" id="closeModal">&times;</button>
-            <video class="modal-video" id="modalVideo" controls>
-                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
         </div>
     </div>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Get In Touch</span>
-                <h2>Contact Me</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p>I'm available for freelance video production, design projects, and creative direction. Let's discuss how we can bring your vision to life!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-mail-line"></i>
-                            </div>
-                            <div>
-                                <h3>Email</h3>
-                                <p>alex@creativeportfolio.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <div>
-                                <h3>Phone</h3>
-                                <p>+1 (555) 987-6543</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <div>
-                                <h3>Studio Location</h3>
-                                <p>Brooklyn, New York</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
-                        <a href="#" class="social-link"><i class="ri-youtube-fill"></i></a>
-                        <a href="#" class="social-link"><i class="ri-behance-fill"></i></a>
-                        <a href="#" class="social-link"><i class="ri-dribbble-line"></i></a>
-                        <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="" disabled selected>Project Type</option>
-                                <option value="video">Video Production</option>
-                                <option value="editing">Video Editing</option>
-                                <option value="design">Graphic Design</option>
-                                <option value="uiux">UI/UX Design</option>
-                                <option value="branding">Branding</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Tell me about your project..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn"><i class="ri-send-plane-line"></i> Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <i class="ri-camera-3-line"></i>
-                        <span>Alex Morgan</span>
-                    </div>
-                    <p>Video Producer & Visual Designer creating compelling visual stories across multiple mediums.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#video-projects">Video Projects</a></li>
-                        <li><a href="#design-projects">Design Projects</a></li>
-                        <li><a href="#ui-projects">UI/UX Projects</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Video Production</a></li>
-                        <li><a href="#">Video Editing</a></li>
-                        <li><a href="#">Motion Graphics</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Brand Identity</a></li>
-                    </ul>
-                </div>
+    
+    <!-- ENORMOUS FOOTER -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="copyright">
-                <p>&copy; <span id="currentYear">2023</span> Alex Morgan. All rights reserved.</p>
+                © 2025 Srey Samnang | Video Editor & IT Specialist Portfolio
+            </div>
+            <div class="contact-info">
+                <div style="color: var(--neon-blue); font-size: 1.5rem;">
+                    <i class="fas fa-envelope"></i> samanngsrey0@gmail.com
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
+    
+    <!-- SCAN LINES EFFECT -->
+    <div class="scanlines"></div>
 
     <script>
-        // DOM Elements
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        const header = document.getElementById('header');
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-        const videoPlayBtns = document.querySelectorAll('.video-play-btn');
-        const videoModal = document.getElementById('videoModal');
-        const closeModal = document.getElementById('closeModal');
-        const modalVideo = document.getElementById('modalVideo');
-        const contactForm = document.getElementById('contactForm');
-        const skillBars = document.querySelectorAll('.skill-level');
-        const currentYear = document.getElementById('currentYear');
+        // ENORMOUS NEON SKY GENERATOR
+        const neonSky = document.getElementById('neonSky');
         
-        // Set current year
-        currentYear.textContent = new Date().getFullYear();
-        
-        // Mobile Menu Toggle
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+        // Create stars
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            const size = Math.random() * 5 + 2;
+            const colors = ['var(--neon-pink)', 'var(--neon-blue)', 'var(--neon-green)', 'var(--neon-yellow)'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
             
-            // Animate skill bars when in viewport
-            animateSkillBars();
-        });
+            star.style.position = 'absolute';
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.backgroundColor = color;
+            star.style.borderRadius = '50%';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.boxShadow = `0 0 ${size * 4}px ${color}`;
+            star.style.animation = `starPulse ${Math.random() * 3 + 2}s infinite alternate`;
+            star.style.zIndex = '-99';
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes starPulse {
+                    0% { opacity: 0.3; transform: scale(1); }
+                    100% { opacity: 1; transform: scale(${Math.random() * 0.5 + 1}); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            neonSky.appendChild(star);
+        }
         
-        // Project filtering for video section
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
+        // Add floating video elements
+        for (let i = 0; i < 10; i++) {
+            const videoElement = document.createElement('div');
+            const icons = ['fa-film', 'fa-video', 'fa-camera', 'fa-edit'];
+            const icon = icons[Math.floor(Math.random() * icons.length)];
+            const size = Math.random() * 80 + 40;
+            const colors = ['var(--neon-pink)', 'var(--neon-blue)', 'var(--neon-green)'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            videoElement.innerHTML = `<i class="fas ${icon}"></i>`;
+            videoElement.style.position = 'absolute';
+            videoElement.style.fontSize = size + 'px';
+            videoElement.style.opacity = '0.05';
+            videoElement.style.left = Math.random() * 100 + 'vw';
+            videoElement.style.top = Math.random() * 100 + 'vh';
+            videoElement.style.color = color;
+            videoElement.style.animation = `floatElement ${Math.random() * 30 + 20}s infinite linear`;
+            videoElement.style.zIndex = '-100';
+            
+            const floatStyle = document.createElement('style');
+            floatStyle.textContent = `
+                @keyframes floatElement {
+                    0% { transform: translate(0, 0) rotate(0deg); }
+                    100% { transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(floatStyle);
+            
+            neonSky.appendChild(videoElement);
+        }
+        
+        // CONTACT BUTTON FUNCTIONALITY
+        const contactBtn = document.getElementById('contactBtn');
+        
+        contactBtn.addEventListener('click', function() {
+            // Create contact modal
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100vw';
+            modal.style.height = '100vh';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            modal.style.zIndex = '10000';
+            modal.style.backdropFilter = 'blur(10px)';
+            
+            modal.innerHTML = `
+                <div style="background: var(--panel-bg); border: 4px solid var(--neon-purple); border-radius: 20px; padding: 3rem; width: 90%; max-width: 600px; position: relative; box-shadow: var(--glow-purple);">
+                    <button id="closeModal" style="position: absolute; top: 1rem; right: 1rem; background: var(--neon-pink); color: black; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 2rem; font-weight: bold; cursor: pointer;">X</button>
+                    <h2 style="color: var(--neon-purple); font-size: 3rem; margin-bottom: 2rem; text-align: center;">CONTACT SREY SAMNANG</h2>
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-phone" style="color: var(--neon-green); font-size: 2rem;"></i>
+                            <div>
+                                <div style="color: var(--neon-yellow); font-size: 1.5rem;">Phone</div>
+                                <div style="color: white; font-size: 1.8rem;">089 891 474</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-envelope" style="color: var(--neon-blue); font-size: 2rem;"></i>
+                            <div>
+                                <div style="color: var(--neon-yellow); font-size: 1.5rem;">Email</div>
+                                <div style="color: white; font-size: 1.8rem;">samanngsrey0@gmail.com</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--neon-pink); font-size: 2rem;"></i>
+                            <div>
+                                <div style="color: var(--neon-yellow); font-size: 1.5rem;">Location</div>
+                                <div style="color: white; font-size: 1.8rem;">St.38 Phum Trea, Stoeng Mean Chey, Phnom Penh, Cambodia</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <div style="color: var(--neon-blue); font-size: 1.8rem; margin-bottom: 1rem;">Send Direct Message</div>
+                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 1rem; margin-bottom: 1rem; background: rgba(255,255,255,0.1); border: 2px solid var(--neon-blue); border-radius: 10px; color: white; font-size: 1.5rem;">
+                            <input type="email" placeholder="Your Email" style="width: 100%; padding: 1rem; margin-bottom: 1rem; background: rgba(255,255,255,0.1); border: 2px solid var(--neon-blue); border-radius: 10px; color: white; font-size: 1.5rem;">
+                            <textarea placeholder="Your Message / Project Details" rows="4" style="width: 100%; padding: 1rem; margin-bottom: 1rem; background: rgba(255,255,255,0.1); border: 2px solid var(--neon-blue); border-radius: 10px; color: white; font-size: 1.5rem;"></textarea>
+                            <button style="width: 100%; padding: 1.5rem; background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)); color: black; border: none; border-radius: 10px; font-size: 1.8rem; font-weight: bold; cursor: pointer;">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Close modal functionality
+            document.getElementById('closeModal').addEventListener('click', function() {
+                document.body.removeChild(modal);
+            });
+            
+            // Close when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                }
+            });
+            
+            // Form submission (simulated)
+            const sendBtn = modal.querySelector('button[style*="linear-gradient"]');
+            sendBtn.addEventListener('click', function() {
+                const name = modal.querySelector('input[type="text"]').value;
+                const email = modal.querySelector('input[type="email"]').value;
+                const message = modal.querySelector('textarea').value;
                 
-                const filter = btn.getAttribute('data-filter');
-                const videoProjectsContainer = document.getElementById('video-projects').querySelector('.projects-container');
-                
-                videoProjectsContainer.querySelectorAll('.project-card').forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                if (name && email && message) {
+                    this.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    this.style.background = 'linear-gradient(45deg, var(--neon-green), var(--neon-blue))';
+                    
+                    setTimeout(() => {
+                        document.body.removeChild(modal);
+                    }, 2000);
+                } else {
+                    this.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please fill all fields';
+                    this.style.background = 'linear-gradient(45deg, var(--neon-pink), var(--neon-yellow))';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = 'Send Message';
+                        this.style.background = 'linear-gradient(45deg, var(--neon-blue), var(--neon-purple))';
+                    }, 2000);
+                }
             });
         });
         
-        // Video modal functionality
-        videoPlayBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const videoId = btn.getAttribute('data-video');
-                // In a real scenario, you would load different videos based on videoId
-                modalVideo.play();
-                videoModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
+        // SKILL TAGS INTERACTION
+        const skillTags = document.querySelectorAll('.skill-tag');
+        
+        skillTags.forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                const colors = ['var(--neon-pink)', 'var(--neon-blue)', 'var(--neon-green)', 'var(--neon-yellow)', 'var(--neon-purple)'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                this.style.borderColor = randomColor;
+                this.style.boxShadow = `0 0 20px ${randomColor}`;
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.borderColor = 'var(--neon-blue)';
+                this.style.boxShadow = 'none';
             });
         });
         
-        closeModal.addEventListener('click', () => {
-            modalVideo.pause();
-            videoModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
+        // TIMELINE ANIMATION
+        const timelineItems = document.querySelectorAll('.timeline-item');
         
-        videoModal.addEventListener('click', (e) => {
-            if (e.target === videoModal) {
-                modalVideo.pause();
-                videoModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-        
-        // Contact form submission
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you within 24 hours.');
-            contactForm.reset();
-        });
-        
-        // Animate skill bars when they come into view
-        function animateSkillBars() {
-            skillBars.forEach(bar => {
-                const barPosition = bar.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
+        function checkTimelineScroll() {
+            timelineItems.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
                 
-                if (barPosition < screenPosition) {
-                    const width = bar.getAttribute('data-width') + '%';
-                    bar.style.width = width;
+                if (itemTop < windowHeight * 0.8) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
                 }
             });
         }
         
-        // Initialize skill bars on page load
-        animateSkillBars();
+        // Initialize timeline items
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-20px)';
+            item.style.transition = 'all 0.8s ease';
+        });
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+        window.addEventListener('scroll', checkTimelineScroll);
+        window.addEventListener('load', checkTimelineScroll);
+        
+        // SOFTWARE ITEMS ANIMATION
+        const softwareItems = document.querySelectorAll('.software-item');
+        softwareItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 6}s`;
+        });
+        
+        // SOCIAL LINKS INTERACTION
+        const socialLinks = document.querySelectorAll('.social-link');
+        
+        socialLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('i');
+                const colors = ['var(--neon-pink)', 'var(--neon-blue)', 'var(--neon-green)', 'var(--neon-yellow)'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
                 
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                // Create particle effect
+                for (let i = 0; i < 5; i++) {
+                    const particle = document.createElement('div');
+                    particle.style.position = 'absolute';
+                    particle.style.width = '8px';
+                    particle.style.height = '8px';
+                    particle.style.backgroundColor = randomColor;
+                    particle.style.borderRadius = '50%';
+                    particle.style.left = '50%';
+                    particle.style.top = '50%';
+                    particle.style.opacity = '0.7';
+                    particle.style.zIndex = '-1';
+                    particle.style.animation = `socialParticle ${Math.random() * 0.5 + 0.3}s forwards`;
+                    
+                    this.appendChild(particle);
+                    
+                    // Remove after animation
+                    setTimeout(() => {
+                        particle.remove();
+                    }, 500);
                 }
             });
+        });
+        
+        // Add social particle animation
+        const socialStyle = document.createElement('style');
+        socialStyle.textContent = `
+            @keyframes socialParticle {
+                0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+                100% { transform: translate(${Math.random() * 60 - 30}px, ${Math.random() * 60 - 30}px) scale(0); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(socialStyle);
+        
+        // CONSOLE GREETING
+        console.log("%cSREY SAMNANG PORTFOLIO ACTIVATED!", "color: #00ffff; font-size: 22px; font-weight: bold; text-shadow: 0 0 10px #00ffff;");
+        console.log("%cVideo Editor & IT Specialist | Currently at KiuQ Company", "color: #ff00ff; font-size: 16px;");
+        
+        // Initialize animations
+        window.addEventListener('load', function() {
+            // Trigger initial animations
+            setTimeout(checkTimelineScroll, 500);
+            
+            // Animate current role
+            const currentRole = document.querySelector('.current-role');
+            if (currentRole) {
+                setInterval(() => {
+                    currentRole.style.textShadow = `0 0 10px var(--neon-green)`;
+                    setTimeout(() => {
+                        currentRole.style.textShadow = `0 0 20px var(--neon-green)`;
+                    }, 1000);
+                }, 2000);
+            }
         });
     </script>
 </body>
